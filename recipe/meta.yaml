@@ -17,6 +17,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - python >=3.6
+    - make
     - autoconf
     - automake
   host:
