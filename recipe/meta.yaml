@@ -10,7 +10,7 @@ source:
   sha256: c5f1a6e472893f135a434f1276dffa5d64508f9d4fa37bb2e492fd0ad4b6042c
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -26,7 +26,6 @@ requirements:
 
 test:
   commands:
-    - conda inspect linkages psqlodbc
     # This is using .so on both osx and linux
     - test -f $PREFIX/lib/psqlodbca.so  # [unix]
     - test -f $PREFIX/lib/psqlodbcw.so  # [unix]
