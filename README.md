@@ -1,11 +1,11 @@
-About psqlodbc
-==============
+About psqlodbc-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/psqlodbc-feedstock/blob/main/LICENSE.txt)
 
 Home: https://odbc.postgresql.org/
 
 Package license: LGPL-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/psqlodbc-feedstock/blob/main/LICENSE.txt)
 
 Summary: psqlODBC is the official PostgreSQL ODBC Driver
 
