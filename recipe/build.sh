@@ -1,8 +1,8 @@
 #!/bin/bash
 
-set -euo pipefail
-autoreconf
-automake --add-missing --copy --force-missing
+set -exuo pipefail
+
+autoreconf -i
 
 ./configure --prefix=$PREFIX --with-libpq=$PREFIX/lib --enable-pthreads
 make -j${CPU_COUNT}
