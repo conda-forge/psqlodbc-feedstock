@@ -4,6 +4,10 @@ set -exuo pipefail
 
 autoreconf -i
 
+if [[ "${target_platform}" == "osx-arm64" ]]; then
+  export ac_cv_search_SQLGetPrivateProfileString="-lodbcinst"
+fi
+
 ./configure --prefix=$PREFIX --with-libpq=$PREFIX/lib --enable-pthreads || (cat config.log; exit 1)
 
 make -j${CPU_COUNT}
