@@ -4,7 +4,8 @@ set -exuo pipefail
 
 autoreconf -i
 
-./configure --prefix=$PREFIX --with-libpq=$PREFIX/lib --enable-pthreads
+./configure --prefix=$PREFIX --with-libpq=$PREFIX/lib --enable-pthreads || (cat config.log; exit 1)
+
 make -j${CPU_COUNT}
 make install
 # generate the driver inst files
