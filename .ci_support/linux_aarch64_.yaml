@@ -1,7 +1,11 @@
+BUILD:
+- aarch64-conda_cos7-linux-gnu
 c_compiler:
 - gcc
 c_compiler_version:
 - '13'
+cdt_arch:
+- aarch64
 cdt_name:
 - cos7
 channel_sources:
@@ -13,4 +17,4 @@ docker_image:
 postgresql:
 - '16'
 target_platform:
-- linux-64
+- linux-aarch64
