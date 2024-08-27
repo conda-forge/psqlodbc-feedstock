@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://odbc.postgresql.org/
-  license: LGPL-2.0
+  license: LGPL-2.0-or-later
   license_family: GPL
   license_file: license.txt
   summary: psqlODBC is the official PostgreSQL ODBC Driver
