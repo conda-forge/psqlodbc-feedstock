@@ -6,6 +6,7 @@ autoreconf -i
 
 if [[ "${target_platform}" == "osx-arm64" ]]; then
   export ac_cv_search_SQLGetPrivateProfileString="-lodbcinst"
+  export ac_cv_path_ODBC_CONFIG=__without_odbc_config
 fi
 
 ./configure --prefix=$PREFIX --with-libpq=$PREFIX/lib --enable-pthreads || (cat config.log; exit 1)
