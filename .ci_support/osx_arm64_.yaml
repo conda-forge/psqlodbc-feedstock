@@ -17,6 +17,6 @@ channel_targets:
 macos_machine:
 - arm64-apple-darwin20.0.0
 postgresql:
-- '16'
+- '17'
 target_platform:
 - osx-arm64
