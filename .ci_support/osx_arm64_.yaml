@@ -5,7 +5,7 @@ MACOSX_SDK_VERSION:
 c_compiler:
 - clang
 c_compiler_version:
-- '18'
+- '19'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -17,6 +17,6 @@ channel_targets:
 macos_machine:
 - arm64-apple-darwin20.0.0
 postgresql:
-- '17'
+- '18'
 target_platform:
 - osx-arm64
