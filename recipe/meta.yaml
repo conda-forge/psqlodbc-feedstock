@@ -1,5 +1,5 @@
 {% set name = "psqlODBC" %}
-{% set version = "17_00_0006" %}
+{% set version = "17_00_0007" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/postgresql-interfaces/psqlodbc/archive/refs/tags/REL-{{ version|replace('.','_') }}.tar.gz
-  sha256: 1c886c5303a43fae3b7bdc4f674aaf3927813e937c310716b6f83fd61434f44c
+  sha256: cf15619e7fcc31ce3f61634243ca9fbb1e1c7dfdac19d7bda2a66483c029d4b5
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
