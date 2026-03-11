@@ -1,0 +1,53 @@
+schema_version: 1
+
+context:
+  name: psqlODBC
+  version: 17_00_0008
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/postgresql-interfaces/psqlodbc/archive/refs/tags/REL-${{ version|replace('.','_') }}.tar.gz
+  sha256: 2718aba2929f5d8ce07f921901b27fa27c424fc297db89d3e025a436595f6626
+
+build:
+  number: 0
+  skip: win
+
+requirements:
+  build:
+    - ${{ stdlib('c') }}
+    - ${{ compiler('c') }}
+    - python >=3.6
+    - make
+    - autoconf
+    - automake
+    - libtool
+  host:
+    - unixodbc
+    - postgresql
+  run:
+    - unixodbc
+    - libpq
+
+tests:
+  - script:
+      - if: unix
+        then: test -f $PREFIX/lib/psqlodbca.so
+      - if: unix
+        then: test -f $PREFIX/lib/psqlodbcw.so
+
+about:
+  license: LGPL-2.0-or-later
+  license_file: license.txt
+  summary: psqlODBC is the official PostgreSQL ODBC Driver
+  homepage: https://odbc.postgresql.org/
+  repository: https://git.postgresql.org/gitweb/?p=psqlodbc.git
+  documentation: https://odbc.postgresql.org/
+
+extra:
+  recipe-maintainers:
+    - mariusvniekerk
+    - xhochy
