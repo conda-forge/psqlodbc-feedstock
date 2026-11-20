@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: psqlODBC
-  version: 17_00_0008
+  version: 1700_0008
 
 package:
   name: ${{ name|lower }}
@@ -13,7 +13,7 @@ source:
   sha256: 2718aba2929f5d8ce07f921901b27fa27c424fc297db89d3e025a436595f6626
 
 build:
-  number: 0
+  number: 1
   skip: win
 
 requirements:
