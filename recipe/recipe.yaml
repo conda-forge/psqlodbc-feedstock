@@ -13,7 +13,7 @@ source:
   sha256: 2718aba2929f5d8ce07f921901b27fa27c424fc297db89d3e025a436595f6626
 
 build:
-  number: 0
+  number: 1
   skip: win
 
 requirements:
@@ -48,6 +48,7 @@ about:
   documentation: https://odbc.postgresql.org/
 
 extra:
+  feedstock-name: psqlodbc
   recipe-maintainers:
     - mariusvniekerk
     - xhochy
