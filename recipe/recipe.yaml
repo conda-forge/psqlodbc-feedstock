@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: psqlODBC
-  version: 1700_0008
+  version: 17_00_0008
 
 package:
   name: ${{ name|lower }}
@@ -48,6 +48,7 @@ about:
   documentation: https://odbc.postgresql.org/
 
 extra:
+  feedstock-name: psqlodbc
   recipe-maintainers:
     - mariusvniekerk
     - xhochy
